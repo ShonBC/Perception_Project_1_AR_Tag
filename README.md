@@ -83,7 +83,26 @@ tracking.py:
 
             The input image is of an April Tag. It is first segmented into an 8x8 grid for a total of 16 segments. These segments are then thresholded to determine if they are white or black. The corners are then checked to determine the orientation of the Tag. The orientation is used to orientate our testudo image (or any image provided) before computing the homography between the AR Tag coordinates and the provided image. Using the homography, the provided image is projected onto the AR Tag in the frame.
 
-            x_11, y_11 = min(x_tag), y_tag[x_tag.index(min(x_tag))] # TL
-        x_22, y_22 = x_tag[y_tag.index(min(y_tag))], min(y_tag) # TR
-        x_33, y_33 = x_tag[y_tag.index(max(y_tag))], max(y_tag) # BL
-        x_44, y_44 = max(x_tag), y_tag[x_tag.index(max(x_tag))] # BR
+projectoin.py: 
+
+    Packages Used:
+
+        1. import numpy
+        2. import cv2 
+
+    Run the program: 
+    
+            1. Run the program using your prefered method (terminal...)
+                If alternate videos need to be tested, change the file path on line 11:
+
+                    - cap = cv2.VideoCapture('media/Tag1.mp4')
+
+                Additional videos were provided in: media/ folder. Choose from Tag0.mp4 through Tag2.mp4.
+
+            Example in Terminal:
+
+                python3 projection.py
+            
+            Output will display the a 3D cube projected onto the AR Tag in each frame.
+            
+    Program Summary:
