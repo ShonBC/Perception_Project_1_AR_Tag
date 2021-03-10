@@ -1,7 +1,7 @@
 """
 Shon Cortes
 ENPM 673 - Perception for Autonomous Robots:
-Project 1 Decode April Tag
+Project 1 Decode April Tag 
 """
 import numpy as np
 import cv2
